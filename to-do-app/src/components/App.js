@@ -99,7 +99,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        TO DO APP
+        <h1>TO DO APP</h1>
         <AddTask />
         <TaskList
           tasks={this.state.tasks}
