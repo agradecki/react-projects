@@ -41,7 +41,23 @@ class App extends Component {
       {
         id: 4,
         text: "isć po zakupy",
-        date: "2019-09-15",
+        date: "2015-11-15",
+        important: false,
+        active: true,
+        finishDate: null,
+      },
+      {
+        id: 5,
+        text: "pomalować dom",
+        date: "2016-01-15",
+        important: false,
+        active: true,
+        finishDate: null,
+      },
+      {
+        id: 6,
+        text: "przecytać książkę",
+        date: "2019-09-19",
         important: false,
         active: true,
         finishDate: null,
@@ -71,7 +87,7 @@ class App extends Component {
     tasks.forEach((task) => {
       if (task.id === id) {
         task.active = false;
-        task.finishDate = new Date().getTime()
+        task.finishDate = new Date().getTime();
       }
     });
 
