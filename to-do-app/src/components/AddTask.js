@@ -29,7 +29,16 @@ class AddTask extends Component {
   };
 
   handleClick = () => {
-    
+    const { text, checked, date } = this.state;
+    const add = this.props.add(text, date, checked);
+
+    if (add) {
+      this.setState({
+        text: "",
+        checked: false,
+        date: this.minDate,
+      });
+    }
   };
 
   render() {
@@ -41,7 +50,7 @@ class AddTask extends Component {
         <input
           type="text"
           placeholder="dodaj zadanie"
-          value={this.state.value}
+          value={this.state.text}
           onChange={this.handleText}
         />
         <label htmlFor="important">Priorytet</label>

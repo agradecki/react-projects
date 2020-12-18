@@ -65,6 +65,8 @@ class App extends Component {
     ],
   };
 
+  counter = this.state.tasks.length;
+
   deleteTask = (id) => {
     // const tasks = [...this.state.tasks];
     // const index = tasks.findIndex((task) => task.id === id);
@@ -96,11 +98,30 @@ class App extends Component {
     });
   };
 
+  addTask = (text, date, important) => {
+    const task = {
+      id: this.counter,
+      text,
+      date,
+      important,
+      active: true,
+      finishDate: null,
+    };
+    this.counter++;
+    console.log(task, this.counter);
+
+    this.setState((prevState) => ({
+      tasks: [...prevState.tasks, task],
+    }));
+
+    return true;
+  };
+
   render() {
     return (
       <div>
         <h1>TO DO APP</h1>
-        <AddTask />
+        <AddTask add={this.addTask} />
         <TaskList
           tasks={this.state.tasks}
           delete={this.deleteTask}
