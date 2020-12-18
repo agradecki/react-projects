@@ -11,7 +11,7 @@ const Task = (props) => {
     return (
       <div>
         <p>
-          <strong style={important ? style : null}>{text}</strong> - do
+          <strong style={important ? style : null}>{text}</strong> - do{" "}
           <span>{date} </span>
           <button onClick={() => props.change(id)}>Zostało zrobione</button>
           <button onClick={() => props.delete(id)}>X</button>
