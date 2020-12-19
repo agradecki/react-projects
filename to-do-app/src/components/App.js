@@ -56,7 +56,7 @@ class App extends Component {
       },
       {
         id: 6,
-        text: "przecytać książkę",
+        text: "przeczytać książkę",
         date: "2019-09-19",
         important: false,
         active: true,
