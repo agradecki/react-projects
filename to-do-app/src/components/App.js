@@ -108,7 +108,6 @@ class App extends Component {
       finishDate: null,
     };
     this.counter++;
-    console.log(task, this.counter);
 
     this.setState((prevState) => ({
       tasks: [...prevState.tasks, task],
