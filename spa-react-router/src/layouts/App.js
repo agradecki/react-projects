@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
+        <div className="app">
           <header>{<Header />}</header>
           <main>
             <aside>{<Navigation />}</aside>
