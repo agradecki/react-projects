@@ -9,7 +9,8 @@ div.app {
 
 header {
   flex-basis: 30vh;
-  color: white;
+  position: relative;
+  overflow: hidden;
 }
 
 main {
